@@ -1,0 +1,136 @@
+name: TopologyEntitlementProbe
+
+options:
+  minimumXcodeGenVersion: 2.45.0
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "26.0"
+    macOS: "26.0"
+
+settings:
+  base:
+    CLANG_ENABLE_MODULES: YES
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_OBJC_BRIDGING_HEADER: Sources/Bridge/BridgingHeader.h
+    SWIFT_VERSION: 6.0
+
+targets:
+  TopologyProbeIOSEntitled:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Generated/TopologyProbeIOSEntitled-Info.plist
+      properties:
+        CFBundleDisplayName: Topology Probe Entitled
+        NSLocalNetworkUsageDescription: This diagnostic probe compares neighbor-cache and connection visibility with the Network Topology Observation entitlement.
+        ProbeVariant: Entitled
+        UILaunchScreen: {}
+    entitlements:
+      path: Entitlements/TopologyProbeIOSEntitled.entitlements
+      properties:
+        com.apple.developer.networking.topology-observation: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.TopologyEntitlementProbe.ios.entitled
+        PRODUCT_NAME: TopologyProbeIOSEntitled
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+
+  TopologyProbeIOSBaseline:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    info:
+      path: Generated/TopologyProbeIOSBaseline-Info.plist
+      properties:
+        CFBundleDisplayName: Topology Probe Baseline
+        NSLocalNetworkUsageDescription: This diagnostic probe compares neighbor-cache and connection visibility without the Network Topology Observation entitlement.
+        ProbeVariant: Baseline
+        UILaunchScreen: {}
+    entitlements:
+      path: Entitlements/TopologyProbeIOSBaseline.entitlements
+      properties: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.TopologyEntitlementProbe.ios.baseline
+        PRODUCT_NAME: TopologyProbeIOSBaseline
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+
+  TopologyProbeMacEntitled:
+    type: application
+    platform: macOS
+    sources:
+      - Sources
+    info:
+      path: Generated/TopologyProbeMacEntitled-Info.plist
+      properties:
+        CFBundleDisplayName: Topology Probe Entitled
+        LSApplicationCategoryType: public.app-category.developer-tools
+        NSLocalNetworkUsageDescription: This diagnostic probe compares neighbor-cache and connection visibility with the Network Topology Observation entitlement.
+        ProbeVariant: Entitled
+    entitlements:
+      path: Entitlements/TopologyProbeMacEntitled.entitlements
+      properties:
+        com.apple.developer.networking.topology-observation: true
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.network.server: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.TopologyEntitlementProbe.mac.entitled
+        PRODUCT_NAME: TopologyProbeMacEntitled
+
+  TopologyProbeMacBaseline:
+    type: application
+    platform: macOS
+    sources:
+      - Sources
+    info:
+      path: Generated/TopologyProbeMacBaseline-Info.plist
+      properties:
+        CFBundleDisplayName: Topology Probe Baseline
+        LSApplicationCategoryType: public.app-category.developer-tools
+        NSLocalNetworkUsageDescription: This diagnostic probe compares neighbor-cache and connection visibility without the Network Topology Observation entitlement.
+        ProbeVariant: Baseline
+    entitlements:
+      path: Entitlements/TopologyProbeMacBaseline.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+        com.apple.security.network.server: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.TopologyEntitlementProbe.mac.baseline
+        PRODUCT_NAME: TopologyProbeMacBaseline
+
+schemes:
+  TopologyProbeIOSEntitled:
+    build:
+      targets:
+        TopologyProbeIOSEntitled: all
+    run:
+      config: Debug
+  TopologyProbeIOSBaseline:
+    build:
+      targets:
+        TopologyProbeIOSBaseline: all
+    run:
+      config: Debug
+  TopologyProbeMacEntitled:
+    build:
+      targets:
+        TopologyProbeMacEntitled: all
+    run:
+      config: Debug
+  TopologyProbeMacBaseline:
+    build:
+      targets:
+        TopologyProbeMacBaseline: all
+    run:
+      config: Debug

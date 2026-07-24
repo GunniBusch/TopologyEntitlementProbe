@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1331A0A55E3CF9051277F6F3 /* TopologyProbeBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */; };
+		3D6B2D2495BB219BEBE8C1AF /* TopologyProbeBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */; };
+		4248FE37AE59C33D9E91B87C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E636B287635CBAF40875E /* ContentView.swift */; };
+		444662A55635F736C9364B8D /* TopologyProbeBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */; };
+		515226A21E8A0B07AF27E1DA /* TopologyEntitlementProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */; };
+		5311ABDC28F5AF806D0230F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E636B287635CBAF40875E /* ContentView.swift */; };
+		675F129068C8EEAC921AFEE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E636B287635CBAF40875E /* ContentView.swift */; };
+		69DD5A95A7995A1DA4901D5D /* ProbeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */; };
+		7AA058EC901630A2B935B2A4 /* TopologyEntitlementProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */; };
+		7E575EF79FF866E85C2B57BF /* ProbeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */; };
+		AFFC74B9D0DD61552DFA0880 /* ProbeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */; };
+		B82F214DBA7C2772153C154E /* TopologyEntitlementProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */; };
+		B914288633A1E434A152276B /* ProbeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */; };
+		CFC67DA82DF60D2C6DD97F08 /* TopologyEntitlementProbeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */; };
+		DEEC9FF6DE439D53540529A9 /* TopologyProbeBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */; };
+		F2F018D30AF73534FF1984FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486E636B287635CBAF40875E /* ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		486E636B287635CBAF40875E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopologyEntitlementProbeApp.swift; sourceTree = "<group>"; };
+		951ED67D8E9446758F8E4A1B /* TopologyProbeIOSBaseline.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TopologyProbeIOSBaseline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TopologyProbeBridge.c; sourceTree = "<group>"; };
+		ACEB886F3055D99827202C9A /* TopologyProbeBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopologyProbeBridge.h; sourceTree = "<group>"; };
+		BD56463BF58FEC639BD9C674 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		BFA0F98E2613FEF9E01958F9 /* TopologyProbeMacBaseline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopologyProbeMacBaseline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbeViewModel.swift; sourceTree = "<group>"; };
+		E2AC830FEC1B86B62BAAF55E /* TopologyProbeIOSEntitled.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = TopologyProbeIOSEntitled.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84B2004E8139EEFBB7382B3 /* TopologyProbeMacEntitled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopologyProbeMacEntitled.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		048F4217FAC7EAC1F9B04171 = {
+			isa = PBXGroup;
+			children = (
+				3687988D230F8D656094375C /* Sources */,
+				A2DD87BEEAB54E5A55AE6D81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3687988D230F8D656094375C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				533A6B1FF320679E62F7C429 /* App */,
+				57A51D35EA2F3E99A0F57B15 /* Bridge */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		533A6B1FF320679E62F7C429 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				486E636B287635CBAF40875E /* ContentView.swift */,
+				D12AB7590FAA6DBD167B92E9 /* ProbeViewModel.swift */,
+				77422A9EBE7AB62E45ACBEBA /* TopologyEntitlementProbeApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		57A51D35EA2F3E99A0F57B15 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				BD56463BF58FEC639BD9C674 /* BridgingHeader.h */,
+				96510A9BBD3C5758B7499A23 /* TopologyProbeBridge.c */,
+				ACEB886F3055D99827202C9A /* TopologyProbeBridge.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		A2DD87BEEAB54E5A55AE6D81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				951ED67D8E9446758F8E4A1B /* TopologyProbeIOSBaseline.app */,
+				E2AC830FEC1B86B62BAAF55E /* TopologyProbeIOSEntitled.app */,
+				BFA0F98E2613FEF9E01958F9 /* TopologyProbeMacBaseline.app */,
+				E84B2004E8139EEFBB7382B3 /* TopologyProbeMacEntitled.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		296D28106EBB553507880432 /* TopologyProbeIOSEntitled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 420BDDAEE57E8B0338521AC1 /* Build configuration list for PBXNativeTarget "TopologyProbeIOSEntitled" */;
+			buildPhases = (
+				D9D6CC7658DC65D346FBDBC7 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopologyProbeIOSEntitled;
+			packageProductDependencies = (
+			);
+			productName = TopologyProbeIOSEntitled;
+			productReference = E2AC830FEC1B86B62BAAF55E /* TopologyProbeIOSEntitled.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EFE77888B4F3AD9C72E0F63 /* TopologyProbeMacBaseline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA297141029C40B337221E76 /* Build configuration list for PBXNativeTarget "TopologyProbeMacBaseline" */;
+			buildPhases = (
+				23245AADF90118760890EDD3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopologyProbeMacBaseline;
+			packageProductDependencies = (
+			);
+			productName = TopologyProbeMacBaseline;
+			productReference = BFA0F98E2613FEF9E01958F9 /* TopologyProbeMacBaseline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48B1B9780701005DB958DDA6 /* TopologyProbeIOSBaseline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D4B3D3E0656E406D641C8AE /* Build configuration list for PBXNativeTarget "TopologyProbeIOSBaseline" */;
+			buildPhases = (
+				33FB1DBD3ECF5F6787CC8113 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopologyProbeIOSBaseline;
+			packageProductDependencies = (
+			);
+			productName = TopologyProbeIOSBaseline;
+			productReference = 951ED67D8E9446758F8E4A1B /* TopologyProbeIOSBaseline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0DA37F91C40D48178534B2F /* TopologyProbeMacEntitled */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832DCE10A4FD3371956C91C8 /* Build configuration list for PBXNativeTarget "TopologyProbeMacEntitled" */;
+			buildPhases = (
+				D8EB492ACBB3E6A8BDE98F2A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopologyProbeMacEntitled;
+			packageProductDependencies = (
+			);
+			productName = TopologyProbeMacEntitled;
+			productReference = E84B2004E8139EEFBB7382B3 /* TopologyProbeMacEntitled.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85A971EBFB84CB889A0B8045 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					296D28106EBB553507880432 = {
+						ProvisioningStyle = Automatic;
+					};
+					2EFE77888B4F3AD9C72E0F63 = {
+						ProvisioningStyle = Automatic;
+					};
+					48B1B9780701005DB958DDA6 = {
+						ProvisioningStyle = Automatic;
+					};
+					F0DA37F91C40D48178534B2F = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FC98CC568C0A7B2ED4436169 /* Build configuration list for PBXProject "TopologyEntitlementProbe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 048F4217FAC7EAC1F9B04171;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A2DD87BEEAB54E5A55AE6D81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48B1B9780701005DB958DDA6 /* TopologyProbeIOSBaseline */,
+				296D28106EBB553507880432 /* TopologyProbeIOSEntitled */,
+				2EFE77888B4F3AD9C72E0F63 /* TopologyProbeMacBaseline */,
+				F0DA37F91C40D48178534B2F /* TopologyProbeMacEntitled */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23245AADF90118760890EDD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				675F129068C8EEAC921AFEE4 /* ContentView.swift in Sources */,
+				69DD5A95A7995A1DA4901D5D /* ProbeViewModel.swift in Sources */,
+				515226A21E8A0B07AF27E1DA /* TopologyEntitlementProbeApp.swift in Sources */,
+				3D6B2D2495BB219BEBE8C1AF /* TopologyProbeBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33FB1DBD3ECF5F6787CC8113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4248FE37AE59C33D9E91B87C /* ContentView.swift in Sources */,
+				7E575EF79FF866E85C2B57BF /* ProbeViewModel.swift in Sources */,
+				7AA058EC901630A2B935B2A4 /* TopologyEntitlementProbeApp.swift in Sources */,
+				DEEC9FF6DE439D53540529A9 /* TopologyProbeBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8EB492ACBB3E6A8BDE98F2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5311ABDC28F5AF806D0230F3 /* ContentView.swift in Sources */,
+				AFFC74B9D0DD61552DFA0880 /* ProbeViewModel.swift in Sources */,
+				B82F214DBA7C2772153C154E /* TopologyEntitlementProbeApp.swift in Sources */,
+				1331A0A55E3CF9051277F6F3 /* TopologyProbeBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9D6CC7658DC65D346FBDBC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2F018D30AF73534FF1984FD /* ContentView.swift in Sources */,
+				B914288633A1E434A152276B /* ProbeViewModel.swift in Sources */,
+				CFC67DA82DF60D2C6DD97F08 /* TopologyEntitlementProbeApp.swift in Sources */,
+				444662A55635F736C9364B8D /* TopologyProbeBridge.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		21BA0C14C9DD826498C2A1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeMacEntitled.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Generated/TopologyProbeMacEntitled-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.mac.entitled;
+				PRODUCT_NAME = TopologyProbeMacEntitled;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		254675FE99075B8A05EA2BB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeIOSBaseline.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/TopologyProbeIOSBaseline-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.ios.baseline;
+				PRODUCT_NAME = TopologyProbeIOSBaseline;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C43C64937649E7C970F9CFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeIOSEntitled.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/TopologyProbeIOSEntitled-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.ios.entitled;
+				PRODUCT_NAME = TopologyProbeIOSEntitled;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F23E427A2D15C4EF48826EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Bridge/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		504F279267073D924A42EDD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeIOSBaseline.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/TopologyProbeIOSBaseline-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.ios.baseline;
+				PRODUCT_NAME = TopologyProbeIOSBaseline;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		99B58D6F62D3649B2923C094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeMacEntitled.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Generated/TopologyProbeMacEntitled-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.mac.entitled;
+				PRODUCT_NAME = TopologyProbeMacEntitled;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB5762966314075A22223584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/Bridge/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		EB3E91225DAC903AAD234114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeMacBaseline.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Generated/TopologyProbeMacBaseline-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.mac.baseline;
+				PRODUCT_NAME = TopologyProbeMacBaseline;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ECB389A474DB43B055F157F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeMacBaseline.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Generated/TopologyProbeMacBaseline-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.mac.baseline;
+				PRODUCT_NAME = TopologyProbeMacBaseline;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F6868D98F58595B72585B3B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Entitlements/TopologyProbeIOSEntitled.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Generated/TopologyProbeIOSEntitled-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TopologyEntitlementProbe.ios.entitled;
+				PRODUCT_NAME = TopologyProbeIOSEntitled;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		420BDDAEE57E8B0338521AC1 /* Build configuration list for PBXNativeTarget "TopologyProbeIOSEntitled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C43C64937649E7C970F9CFE /* Debug */,
+				F6868D98F58595B72585B3B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5D4B3D3E0656E406D641C8AE /* Build configuration list for PBXNativeTarget "TopologyProbeIOSBaseline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				254675FE99075B8A05EA2BB8 /* Debug */,
+				504F279267073D924A42EDD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		832DCE10A4FD3371956C91C8 /* Build configuration list for PBXNativeTarget "TopologyProbeMacEntitled" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B58D6F62D3649B2923C094 /* Debug */,
+				21BA0C14C9DD826498C2A1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CA297141029C40B337221E76 /* Build configuration list for PBXNativeTarget "TopologyProbeMacBaseline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECB389A474DB43B055F157F1 /* Debug */,
+				EB3E91225DAC903AAD234114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FC98CC568C0A7B2ED4436169 /* Build configuration list for PBXProject "TopologyEntitlementProbe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5762966314075A22223584 /* Debug */,
+				4F23E427A2D15C4EF48826EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85A971EBFB84CB889A0B8045 /* Project object */;
+}
