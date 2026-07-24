@@ -15,14 +15,21 @@ Tested on an iPhone running iOS 27.0.
 | Observation | Baseline | Entitled |
 | --- | ---: | ---: |
 | Own interface link addresses | Privacy placeholder | Real addresses |
-| IPv4 route entries after the same `/24` warm-up | 14 | 301 |
+| IPv4 route entries after the same `/24` warm-up | 14 | 292 |
 | IPv4 neighbor entries returned directly | 0 | 254 |
 | IPv4 neighbors with resolved link address | 0 | 28 |
 | IPv6 route entries | 96 | 169 |
 | TCP/UDP/raw PCB sysctls | `EPERM` | `EPERM` |
+| Network Statistics provider subscriptions | Denied (`EPERM`; ifnet `ENOTSUP`) | Denied (`EPERM`; ifnet `ENOTSUP`) |
+| Live route-socket messages during warm-up | 0 | 0 |
 
 The entitlement exposes the complete route/neighbor view and real link-layer
-addresses. It does not unlock the TCP/UDP PCB sysctls on iOS.
+addresses. The returned route records also contain route class/flags,
+interface index, expiry, MTU, RTT, use count, and packets-sent metrics. It does
+not unlock the TCP/UDP PCB sysctls or Network Statistics providers on iOS.
+Both variants could connect to `com.apple.network.statistics`, but every
+provider subscription was rejected (`EPERM` for most providers and `ENOTSUP`
+for ifnet).
 
 ## iPadOS 26
 
@@ -40,25 +47,41 @@ Tested with sandboxed macOS apps on macOS 27.0.
 | Observation | Baseline | Entitled |
 | --- | ---: | ---: |
 | Own interface link addresses | Privacy placeholder | Real addresses |
-| IPv4 route entries | 13–14 | About 400 after `/24` warm-up |
+| IPv4 route entries | 9 | 284 after `/24` warm-up |
 | IPv4 neighbor records | 0 | 257 |
 | IPv6 route entries | 63 | 81 |
-| Legacy TCP PCB records | 0 | 78 |
-| Legacy UDP PCB records | 0 | 66 |
+| TCP PCB records | 3, all belonging to the probe | 65, across 28 PIDs |
+| UDP PCB records | 1, belonging to the probe | 62, across 19 PIDs |
 | Raw PCB records | 0 | 1 |
-| Tagged TCP PCB records | 0 | 78 |
-| Tagged UDP PCB records | 0 | 66 |
-| Distinct PIDs in tagged TCP records | 0 | 32 |
-| TCP states observed | None | 14 listening, 64 established |
+| Network Statistics TCP sources | 62, across 23 PIDs | 55, across 20 PIDs |
+| Network Statistics UDP sources | 35, across 10 PIDs | 36, across 11 PIDs |
 | Cross-process `libproc` enumeration | Denied | Denied |
+| Targeted executable-path lookups for TCP-owner PIDs | 1 of 1 | 26 of 28 |
+| Targeted BSD-info lookups for TCP-owner PIDs | 1 of 1 | 18 of 28 |
+| Targeted resource-usage lookups for TCP-owner PIDs | 1 of 1 | 1 of 28 |
 | Kernel-event socket | Denied | Denied |
+| Live route-socket messages during warm-up | 0 | 0 |
 
 The tagged PCB records contain local/remote endpoints, TCP state, UID,
 owning/effective PID, socket flags, buffer occupancy, and traffic counters.
-Process names were resolvable for 22 of the 32 TCP PIDs and 10 of the 18 UDP
-PIDs in this run. This is enough for a `netstat`/partial-`lsof`-style snapshot.
-It is not the streaming per-flow telemetry used by `nettop`, and the
-entitlement does not grant general cross-process `libproc` access.
+They are enough for a `netstat`/partial-`lsof`-style snapshot. Although the
+App Sandbox denied `proc_listallpids` in both builds, targeted calls using PIDs
+obtained from the entitled PCB records were more permissive: `proc_pidpath`
+resolved most executable paths, while `proc_name` and `PROC_PIDTBSDINFO`
+resolved a smaller subset. Cross-process resource-usage lookup remained
+denied.
+
+The Network Statistics control independently exposed nettop-style per-flow
+states, byte/packet counters, interface-type counters, connection attempts,
+and owning PIDs to **both** sandboxed macOS variants. A long-lived client could
+subscribe to updates; this probe takes a bounded snapshot. It can therefore be
+combined with the topology entitlement, but it is not access granted by the
+entitlement.
+
+The full route dump adds considerably more than hardware addresses. In the
+entitled run it exposed gateway, host, link-layer, interface-scoped, local,
+broadcast, multicast, global, and router classifications along with interface
+indexes, expiration state, MTU, RTT, use counts, and packets-sent metrics.
 
 ## Signing behavior
 
@@ -71,31 +94,25 @@ catalog does not contain this capability. Creating a macOS development profile
 through the App Store Connect API produced a valid profile containing the
 entitlement; manual Xcode signing with that profile succeeded.
 
-## Public-documentation filter
+## Process-inspection entitlements
 
-The exact entitlement is absent from Apple's public Entitlements index, and
-searches of Apple's public developer documentation returned no page for:
+The exact topology entitlement remains absent from Apple's public
+[Entitlements index](https://developer.apple.com/documentation/bundleresources/entitlements).
+No normal developer capability was found whose purpose is to make
+`proc_listallpids` work inside the App Sandbox.
 
-- `com.apple.developer.networking.topology-observation`
-- `com.apple.developer.cross-architecture-support`
-- `com.apple.developer.cross-architecture-support-unmanaged`
-- `com.apple.developer.model-delegation`
+Apple's public
+[`com.apple.security.cs.debugger`](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.cs.debugger)
+entitlement governs debugger task-port access, not process-list enumeration.
+The restricted
+[`com.apple.developer.endpoint-security.client`](https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.developer.endpoint-security.client)
+entitlement enables an Endpoint Security client/system extension; it is a
+separate process-monitoring architecture, not a generic `libproc` permission.
 
-Two server-exposed capability labels meet the same public-documentation filter:
-
-- **Network Topology Observation** — confirmed requestable and runtime-tested.
-- **Cross-architecture Compatibility Framework** — visible in the live
-  developer portal; the likely corresponding entitlement keys occur in the
-  macOS 27 kernel, but the mapping, behavior, and third-party provisioning
-  remain unverified.
-
-`com.apple.developer.model-delegation` is a separate OS-private finding, not a
-confirmed developer-portal capability. It appears in an Apple generative
-partner extension and in Xcode 27's link-metadata tooling, suggesting model
-provider delegation into system experiences. It is not shown as a requestable
-capability.
-
-Items such as Accessory Access USB, FSKit mounting, Suggested Actions, Trust
-Insights, Background Inference, EnergyKit LoadEvents, and Media Device
-Extension are excluded from the undocumented list because Apple now documents
-them publicly or declares them in the public SDK.
+In Apple's open-source
+[`bsd/kern/proc_info.c`](https://github.com/apple-oss-distributions/xnu/blob/main/bsd/kern/proc_info.c),
+the list-PID syscall passes through the MAC policy hook
+`mac_proc_check_proc_info`. The observed `EPERM` is consistent with the
+sandbox policy denying that operation. The topology entitlement does not
+remove the denial, but its PCB records provide PIDs that can be used for the
+targeted lookups measured above.

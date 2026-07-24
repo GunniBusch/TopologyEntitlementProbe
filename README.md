@@ -9,14 +9,18 @@ There are separate iOS/iPadOS and sandboxed macOS targets. The probe checks:
 
 - local IPv4, IPv6, and link-layer interface visibility through `getifaddrs`
 - IPv4 and IPv6 neighbor-cache visibility with `NET_RT_FLAGS` and `NET_RT_FLAGS_PRIV`
-- IPv4/IPv6 route dumps, route flags, and interface-list sysctls
-- route and kernel-event socket creation
+- IPv4/IPv6 route dumps, route classes, metrics, and interface-list sysctls
+- live route-socket notifications and kernel-event socket creation
 - TCP/UDP/raw PCB sysctl visibility, including tagged socket-table metadata on macOS
-- system process/socket enumeration and TCP state through `libproc`
+- Network Statistics provider visibility through the kernel-control protocol
+- global process enumeration and targeted PID metadata through `libproc`
 
-The `libproc` header explicitly describes those interfaces as private and
-subject to change. Their inclusion here is investigative and does not imply
-that they are suitable for App Store production code.
+The `libproc` interfaces and the Network Statistics message protocol used by
+the probe are private implementation details and subject to change. The latter
+was reconstructed from Apple's open-source
+[`xnu/bsd/net/ntstat.h`](https://github.com/apple-oss-distributions/xnu/blob/main/bsd/net/ntstat.h).
+Their inclusion here is investigative and does not imply that they are
+suitable for App Store production code.
 
 See [RESULTS.md](RESULTS.md) for the sanitized A/B results and the
 public-documentation check.
